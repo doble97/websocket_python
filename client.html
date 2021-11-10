@@ -10,8 +10,8 @@
     <script>
         ws = new WebSocket('ws://localhost:7777')
         ws.onopen = (event)=>{
-            console.log('Websocket conectado');
-            ws.send('Hola desde el cliente')
+            console.log('Conexion exitosa');
+            // ws.send('')
         }
         ws.onmessage = (event)=>{
             console.log('Desde el servidor:', event.data);

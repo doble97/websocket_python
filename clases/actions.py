@@ -4,7 +4,8 @@ class Actions:
     def __init__(self) -> None:
         pass
     def deleteUser(self, ws_client:socket, room:Room):
-        del room.users[ws_client]
+        if ws_client in room.users:
+            del room.users[ws_client]
     def addUser(self, ws_client:socket, name:str, room:Room):
         print('Dentro del addUser')
         room.users[ws_client] = name
